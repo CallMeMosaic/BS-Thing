@@ -1,22 +1,11 @@
-# Basis-Image für C-Entwicklung
-FROM MinGw:latest
+FROM gcc:latest
+WORKDIR /app
 
-# Arbeitsverzeichnis setzen
-WORKDIR /app/RAG-Server
+# Kopiere den gesamten src-Ordner (inkl. Unterverzeichnis) in /app
+COPY src/ ./src/
 
-# Systemabhängigkeiten installieren
-RUN apt-get update && apt-get install -y \
-    gcc \
-    libcurl4-openssl-dev \
-    libsqlite3-dev \
-    make \
-    && rm -rf /var/lib/apt/lists/*
+# Kompiliere mit dem korrekten Pfad
+RUN gcc ./src/main.c -o ./src/myapp
 
-# Projekt in den Container kopieren
-COPY . /app
-
-# Kompiliere das C-Programm
-RUN gcc RAG-Server/src/main.c -o RAG-Server/src/main
-
-# Optional: Führe das Programm aus
-CMD ["./src/main"]
+# Führe die Anwendung aus
+CMD ["./src/myapp"]
