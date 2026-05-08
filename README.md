@@ -9,8 +9,13 @@ Ein modularer Retrieval-Augmented Generation (RAG) Server mit FastAPI und Chroma
 ## Installation
 
 1. Repository klonen
-2. setup.sh ausführen und ggf. fehlgeschlagene oder nicht gestartete Container neustarten.
+2. Docker (Desktop) starten
+3. setup.sh ausführen und ggf. fehlgeschlagene oder nicht gestartete Container neustarten.
 
+
+## Vorraussetzung
+GitHub Projekt ist in CLion
+CLion compiliert im Docker
 
 ## Verwendung
 ### API Endpoints
