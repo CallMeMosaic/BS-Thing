@@ -22,13 +22,19 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Default" ENABLED="true" GENERATION_DIR="/app/build" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2d676b1-0775-42fd-96ac-517bb5d521b5" name="Changes" comment="initial Docker commit">
-      <change afterPath="$PROJECT_DIR$/RAG-Server/src/api.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG-Server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG-Server/src/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG-Server/src/server.c" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/server.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +47,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Freyja" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,12 +58,12 @@
     &quot;assignee&quot;: &quot;CallMeMosaic&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/CallMeMosaic/BS-Thing.git",
-    "accountId": "b17b3085-4eee-4efa-836b-df8981f2e9cb"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/CallMeMosaic/BS-Thing.git&quot;,
+    &quot;accountId&quot;: &quot;b561d4c6-60f1-4690-9c40-10e64a856a32&quot;
   }
-}]]></component>
+}</component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="KaeNnBKw" />
   </component>
@@ -77,6 +83,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "C/C++ File.main.c.executor": "Run",
+    "C/C++ File.server.c.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -91,7 +98,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Docker",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/lenab/CLionProjects/BS-Thing/DB",
     "node.js.detected.package.eslint": "true",
@@ -100,7 +107,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "org.rust.first.attach.projects": "true",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "CPPToolchains",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -114,14 +121,20 @@
       <recent name="C:\Users\lenab\CLionProjects\BS-Thing\RAG-Server\src" />
     </key>
   </component>
-  <component name="RunManager" selected="C/C++ File.main.c">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+  <component name="RunManager" selected="C/C++ File.server.c">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="main.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BS_Thingy" TARGET_NAME="main.c" CONFIG_NAME="main.c">
       <option name="sourceFile" value="RAG-Server\src\main.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="server.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BS-Thing" TARGET_NAME="server.c" CONFIG_NAME="server.c">
+      <option name="sourceFile" value="RAG-Server\src\server.c" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
@@ -143,8 +156,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Shell Script.setup.sh" />
+        <item itemvalue="C/C++ File.server.c" />
         <item itemvalue="C/C++ File.main.c" />
+        <item itemvalue="Shell Script.setup.sh" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +173,7 @@
       <workItem from="1777277654328" duration="568000" />
       <workItem from="1777551980619" duration="1604000" />
       <workItem from="1777809673658" duration="1667000" />
-      <workItem from="1778163970442" duration="1658000" />
+      <workItem from="1778237416070" duration="2859000" />
     </task>
     <task id="LOCAL-00001" summary="initial Docker commit">
       <option name="closed" value="true" />

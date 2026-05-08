@@ -3,8 +3,6 @@ project(BS_Thingy C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(BS_Thingy main.c
-        RAG-Server/src/main.c
+add_executable(BS_Thingy server.c
         RAG-Server/src/api.c
-        RAG-Server/src/server.c
         RAG-Server/src/server.h)

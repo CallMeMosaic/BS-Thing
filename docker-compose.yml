@@ -24,7 +24,9 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./data/documents:/app/RAG-Server/documents
+      - .:/app  # Mountet das gesamte Projektverzeichnis nach /app
+      - ./data/documents:/app/RAG-Server/documents  # Falls benötigt
+    working_dir: /app  # Arbeitsverzeichnis im Container
     environment:
       - LLM_HOST=rag-llm
       - LLM_PORT=11434

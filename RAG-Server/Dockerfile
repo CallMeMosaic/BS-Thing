@@ -1,11 +1,21 @@
-FROM gcc:latest
-WORKDIR /app
+FROM ubuntu:latest
+
+RUN apt-get update && \
+    apt-get install -y \
+        gcc \
+        g++ \
+        make \
+        cmake \
+        gdb && \
+    rm -rf /var/lib/apt/lists/*
 
 # Kopiere den gesamten src-Ordner (inkl. Unterverzeichnis) in /app
-COPY src/ ./src/
+WORKDIR /app
+COPY . .
+RUN mkdir -p /app/build
 
 # Kompiliere mit dem korrekten Pfad
-RUN gcc ./src/main.c -o ./src/myapp
+RUN gcc /src/server.c -o /src/server
 
 # Führe die Anwendung aus
-CMD ["./src/myapp"]
+CMD ["./src/server"]
