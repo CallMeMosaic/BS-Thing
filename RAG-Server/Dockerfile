@@ -2,12 +2,12 @@ FROM ubuntu:latest
 
 RUN apt-get update && \
     apt-get install -y \
-        gcc \
-        g++ \
-        make \
-        cmake \
-        gdb && \
-    rm -rf /var/lib/apt/lists/*
+    gcc \
+    g++ \
+    make \
+    cmake \
+    gdb \
+    && rm -rf /var/lib/apt/lists/* \
 
 # Kopiere den gesamten src-Ordner (inkl. Unterverzeichnis) in /app
 WORKDIR /app
