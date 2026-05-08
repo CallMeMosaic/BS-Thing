@@ -1,5 +1,6 @@
 # BS-Thing
 
+
 # RAG Server
 
 Ein modularer Retrieval-Augmented Generation (RAG) Server mit FastAPI und ChromaDB und Ollama.
