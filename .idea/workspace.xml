@@ -18,19 +18,23 @@
     <option name="reloaded" value="true" />
   </component>
   <component name="CMakeRunConfigurationManager">
-    <generated />
+    <generated>
+      <config projectName="BS_Thingy" targetName="BS_Thingy" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Default" ENABLED="true" GENERATION_DIR="/app/build" />
+      <configuration PROFILE_NAME="Debug-Docker" ENABLED="true" GENERATION_DIR="build" CONFIG_NAME="Debug" TOOLCHAIN_NAME="Docker" />
+      <configuration PROFILE_NAME="Default" ENABLED="false" GENERATION_DIR="/app/build" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2d676b1-0775-42fd-96ac-517bb5d521b5" name="Changes" comment="initial Docker commit">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="f2d676b1-0775-42fd-96ac-517bb5d521b5" name="Changes" comment="Merged Docker and Freyja.&#10;Also added the original server.c file back manually.&#10;Doesn't compile yet.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG-Server/src/api.c" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/api.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG-Server/src/server.c" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/server.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +44,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Docker" />
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -67,6 +72,12 @@
     <commands />
     <urls />
   </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2026" />
+    <option name="minorVersion" value="1" />
+    <option name="productBranch" value="Classic" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2,
   &quot;fromUser&quot;: false
@@ -80,6 +91,7 @@
   "keyToString": {
     "C/C++ File.main.c.executor": "Run",
     "C/C++ File.server.c.executor": "Run",
+    "CMake Application.server.c.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -114,16 +126,27 @@
       <recent name="C:\Users\lenab\CLionProjects\BS-Thing" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Freyj\CLionProjects\BS-Thing\RAG-Server\src" />
       <recent name="C:\Users\lenab\CLionProjects\BS-Thing\RAG-Server\src" />
     </key>
   </component>
-  <component name="RunManager" selected="C/C++ File.server.c">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+  <component name="RunManager" selected="CMake Application.server.c">
+    <configuration name="BS_Thingy" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BS_Thingy" TARGET_NAME="BS_Thingy" CONFIG_NAME="Debug-Docker" RUN_TARGET_PROJECT_NAME="BS_Thingy" RUN_TARGET_NAME="BS_Thingy">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BS_Thingy" TARGET_NAME="main.c" CONFIG_NAME="main.c">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="server.c" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug-Docker" RUN_TARGET_PROJECT_NAME="BS_Thingy" RUN_TARGET_NAME="BS_Thingy" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BS-Thing" TARGET_NAME="main.c" CONFIG_NAME="main.c">
       <option name="sourceFile" value="RAG-Server\src\main.c" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
@@ -151,6 +174,13 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="C/C++ File.main.c" />
+      <item itemvalue="C/C++ File.server.c" />
+      <item itemvalue="CMake Application.server.c" />
+      <item itemvalue="CMake Application.BS_Thingy" />
+      <item itemvalue="Shell Script.setup.sh" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="C/C++ File.server.c" />
@@ -171,6 +201,7 @@
       <workItem from="1777551980619" duration="1604000" />
       <workItem from="1777809673658" duration="1667000" />
       <workItem from="1778237416070" duration="2859000" />
+      <workItem from="1778685620873" duration="4719000" />
     </task>
     <task id="LOCAL-00001" summary="initial Docker commit">
       <option name="closed" value="true" />
@@ -180,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777212794501</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Merged Docker and Freyja.&#10;Also added the original server.c file back manually.&#10;Doesn't compile yet.">
+      <option name="closed" value="true" />
+      <created>1778242409371</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1778242409371</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +233,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial Docker commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial Docker commit" />
+    <MESSAGE value="Merged Docker and Freyja.&#10;Also added the original server.c file back manually.&#10;Doesn't compile yet." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merged Docker and Freyja.&#10;Also added the original server.c file back manually.&#10;Doesn't compile yet." />
   </component>
 </project>
