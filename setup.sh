@@ -11,6 +11,7 @@ chmod -R 755 data/
 # Alte Container stoppen
 docker compose down --remove-orphans
 
+
 # Port freigeben falls nötig
 sudo pkill -f rag-llm
 sudo pkill -f rag-server

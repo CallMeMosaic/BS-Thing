@@ -19,7 +19,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="BS_Thingy" targetName="BS_Thingy" />
+      <config projectName="BS_Thingy" targetName="BS_Thingy.exe" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -30,11 +30,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2d676b1-0775-42fd-96ac-517bb5d521b5" name="Changes" comment="Merged Docker and Freyja.&#10;Also added the original server.c file back manually.&#10;Doesn't compile yet.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAG-Server/include/client_handler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAG-Server/include/config.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAG-Server/include/server_socket.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAG-Server/src/client_handler.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAG-Server/src/server_socket.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAG-Server/src/api.c" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/api.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG-Server/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG-Server/src/server.c" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/server.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG-Server/src/server.h" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/include/server.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +68,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/CallMeMosaic/BS-Thing.git&quot;,
-    &quot;accountId&quot;: &quot;b561d4c6-60f1-4690-9c40-10e64a856a32&quot;
+    &quot;accountId&quot;: &quot;b17b3085-4eee-4efa-836b-df8981f2e9cb&quot;
   }
 }</component>
   <component name="MacroExpansionManager">
@@ -87,38 +93,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "C/C++ File.main.c.executor": "Run",
-    "C/C++ File.server.c.executor": "Run",
-    "CMake Application.server.c.executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "RunOnceActivity.west.config.association.type.startup.service": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SHELLCHECK.PATH": "C:\\Users\\lenab\\AppData\\Roaming\\JetBrains\\CLion2026.1\\plugins\\Shell Script\\shellcheck.exe",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "Freyja",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/lenab/CLionProjects/BS-Thing/DB",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "org.rust.first.attach.projects": "true",
-    "settings.editor.selected.configurable": "CPPToolchains",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ File.main.c.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.server.c.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.BS_Thingy.exe.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.server.c.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\lenab\\AppData\\Roaming\\JetBrains\\CLion2026.1\\plugins\\Shell Script\\shellcheck.exe&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Freyja-Resort-Of-Server&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lenab/CLionProjects/BS-Thing/DB&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;clion.custom.compiler.configurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lenab\CLionProjects\BS-Thing\DB" />
@@ -126,37 +133,20 @@
       <recent name="C:\Users\lenab\CLionProjects\BS-Thing" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="Y:\University Projects\BS-Thing\RAG-Server\include" />
       <recent name="C:\Users\Freyj\CLionProjects\BS-Thing\RAG-Server\src" />
       <recent name="C:\Users\lenab\CLionProjects\BS-Thing\RAG-Server\src" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.server.c">
-    <configuration name="BS_Thingy" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BS_Thingy" TARGET_NAME="BS_Thingy" CONFIG_NAME="Debug-Docker" RUN_TARGET_PROJECT_NAME="BS_Thingy" RUN_TARGET_NAME="BS_Thingy">
+  <component name="RunManager" selected="CMake Application.BS_Thingy.exe">
+    <configuration name="BS_Thingy.exe" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BS_Thingy" TARGET_NAME="BS_Thingy.exe" CONFIG_NAME="Debug-Docker" RUN_TARGET_PROJECT_NAME="BS_Thingy" RUN_TARGET_NAME="BS_Thingy.exe">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="server.c" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug-Docker" RUN_PATH="server.exe" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="server.c" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug-Docker" RUN_TARGET_PROJECT_NAME="BS_Thingy" RUN_TARGET_NAME="BS_Thingy" EXPLICIT_BUILD_TARGET_NAME="all">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="main.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BS-Thing" TARGET_NAME="main.c" CONFIG_NAME="main.c">
-      <option name="sourceFile" value="RAG-Server\src\main.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="server.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BS-Thing" TARGET_NAME="server.c" CONFIG_NAME="server.c">
-      <option name="sourceFile" value="RAG-Server\src\server.c" />
-      <option name="toolchainName" value="Docker" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="setup.sh" type="ShConfigurationType" temporary="true">
@@ -175,16 +165,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="C/C++ File.main.c" />
-      <item itemvalue="C/C++ File.server.c" />
+      <item itemvalue="CMake Application.BS_Thingy.exe" />
       <item itemvalue="CMake Application.server.c" />
-      <item itemvalue="CMake Application.BS_Thingy" />
       <item itemvalue="Shell Script.setup.sh" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="C/C++ File.server.c" />
-        <item itemvalue="C/C++ File.main.c" />
         <item itemvalue="Shell Script.setup.sh" />
       </list>
     </recent_temporary>
@@ -202,6 +188,8 @@
       <workItem from="1777809673658" duration="1667000" />
       <workItem from="1778237416070" duration="2859000" />
       <workItem from="1778685620873" duration="4719000" />
+      <workItem from="1778704498871" duration="9645000" />
+      <workItem from="1778840331331" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="initial Docker commit">
       <option name="closed" value="true" />
