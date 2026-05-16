@@ -16,7 +16,7 @@ COPY . .
 RUN mkdir -p /app/build
 
 # Kompiliere mit dem korrekten Pfad
-RUN gcc ./src/server.c -o ./src/server
+RUN gcc ./src/server.c ./src/server_socket.c ./src/client_handler.c ./src/api.c ./src/request_parser.c ./src/response.c -I./include -o ./src/server
 
 # Führe die Anwendung aus
 CMD ["./src/server"]
