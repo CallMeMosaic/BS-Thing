@@ -28,6 +28,10 @@ char* create_http_response(
             status_text = "Internal Server Error";
             break;
 
+    case 201:
+        status_text = "Created";
+        break;
+
         default:
             status_text = "Unknown";
             break;
