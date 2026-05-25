@@ -30,13 +30,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2d676b1-0775-42fd-96ac-517bb5d521b5" name="Changes" comment="Merged Docker and Freyja.&#10;Also added the original server.c file back manually.&#10;Doesn't compile yet.">
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+    <list default="true" id="f2d676b1-0775-42fd-96ac-517bb5d521b5" name="Changes" comment="Multithreading and basic commands for server.c are implemented!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAG-Server/include/client_handler.h" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/include/client_handler.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAG-Server/include/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/include/config.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAG-Server/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAG-Server/src/client_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/client_handler.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG-Server/src/server.c" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/server.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG-Server/src/server_socket.c" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/server_socket.c" afterDir="false" />
     </list>
@@ -207,7 +202,7 @@
       <workItem from="1777809673658" duration="1667000" />
       <workItem from="1778237416070" duration="2859000" />
       <workItem from="1778685620873" duration="4719000" />
-      <workItem from="1779729539532" duration="3305000" />
+      <workItem from="1779729539532" duration="5433000" />
     </task>
     <task id="LOCAL-00001" summary="initial Docker commit">
       <option name="closed" value="true" />
@@ -225,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778242409371</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Multithreading and basic commands for server.c are implemented!">
+      <option name="closed" value="true" />
+      <created>1779732988806</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779732988806</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +243,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial Docker commit" />
     <MESSAGE value="Merged Docker and Freyja.&#10;Also added the original server.c file back manually.&#10;Doesn't compile yet." />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged Docker and Freyja.&#10;Also added the original server.c file back manually.&#10;Doesn't compile yet." />
+    <MESSAGE value="Multithreading and basic commands for server.c are implemented!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multithreading and basic commands for server.c are implemented!" />
   </component>
 </project>

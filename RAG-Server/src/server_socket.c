@@ -95,7 +95,7 @@ int accept_client(int server_fd) {
     }
 
     // Print for validation
-    printf("Client connected.\n");
+    //printf("Client connected.\n");
 
     // returns the communication socket
     return client_fd;
