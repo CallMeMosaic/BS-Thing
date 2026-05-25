@@ -6,6 +6,7 @@
 
 // Import function declarations to later pass off to server.c
 #include "../include/server_socket.h"
+#include "../include/config.h"
 
 #include <stdio.h>      // For input/output functions (printf, perror)
 #include <stdlib.h>     // For string functions (strlen, memset)
@@ -14,11 +15,10 @@
 #include <sys/socket.h> // For socket functions (socket, bind, listen, accept)
 #include <netinet/in.h> // For IPv4 address structure (sockaddr_in) and htons()
 
-#define MAX_PENDING_CONNECTIONS 3
+
 
 
 int create_server_socket(int port) {
-
     // Creates a TCP Socket with AF_INET (IPv4 Address), SOCK_STREAM (TCP), 0 (Default TCP Protocol) and returns a positive integer = socket descriptor or -1 if creation failed
     int server_fd = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -36,13 +36,14 @@ int create_server_socket(int port) {
 
     // Create a Struct sockaddr_in holding IP Address, Port, protocol family
     struct sockaddr_in server_address;
-    server_address.sin_family = AF_INET;            // Use IPv4
-    server_address.sin_addr.s_addr = INADDR_ANY;    // Accept all interfaces so localhost, LAN IP, Docker Interace and so on are accepted
-    server_address.sin_port = htons(port);          // Port assignment. htons converts CPU byte order to network byte order
+    server_address.sin_family = AF_INET; // Use IPv4
+    server_address.sin_addr.s_addr = INADDR_ANY;
+    // Accept all interfaces so localhost, LAN IP, Docker Interace and so on are accepted
+    server_address.sin_port = htons(port); // Port assignment. htons converts CPU byte order to network byte order
 
     // Attaches the socket to the IP Adress and the Port unsing bind by passing the socket (server_fd), converts sockaddr to a generic socket address abd the sizeof(server_address)
     // Checks if the bind() functio returns bigger than 0 if so binding was successful
-    if (bind(server_fd, (struct sockaddr *)&server_address, sizeof(server_address)) < 0) {
+    if (bind(server_fd, (struct sockaddr *) &server_address, sizeof(server_address)) < 0) {
         // Prints a system error
         perror("Failed to bind socket");
         // Closes the socket
@@ -83,7 +84,7 @@ int accept_client(int server_fd) {
     // Passes the socket, a cast and the client address to the accept function.
     // server_fd is the listening socket
     // client_fd is the communication socket
-    int client_fd = accept(server_fd, (struct sockaddr *)&client_address, &client_addr_len);
+    int client_fd = accept(server_fd, (struct sockaddr *) &client_address, &client_addr_len);
 
     // Checks if the communication socket is smaller 0, which would indicate that an invalid or failed socket was passed
     if (client_fd < 0) {

@@ -12,6 +12,7 @@ add_executable(BS_Thingy.exe server.c
         server_socket.c
         client_handler.c
         request_parser.c
-        response.c
-        server.h)
+        response.c)
+
+target_link_libraries(BS_Thingy.exe pthread)
 
