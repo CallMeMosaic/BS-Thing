@@ -20,6 +20,10 @@ char* create_http_response(
             status_text = "OK";
             break;
 
+        case 400:
+            status_text = "Bad Request";
+            break;
+
         case 404:
             status_text = "Not Found";
             break;
