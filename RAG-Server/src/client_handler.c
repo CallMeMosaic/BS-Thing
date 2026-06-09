@@ -7,6 +7,7 @@
 
 #include "../include/client_handler.h"
 #include "../include/config.h"
+#include "../include/request_parser.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -49,43 +50,75 @@ int handle_client(int client_fd) {
     //printf("DEBUG: BUFFER RECEIVED AS: [%s]\n", buffer);
     //printf("DEBUG: bytes_read: %zd\n", bytes_read);
 
-    if (strncmp(buffer, "shutdown\n",8) == 0 ||  strncmp(buffer, "exit\n",8) == 0 || strncmp(buffer, "shutdown",8) == 0 || strncmp(buffer, "Holmberg-15A",8) == 0) {
-        const char *response = "Shutting down...";
-        write(client_fd, response, strlen(response));
-        //printf("SHUTDOWN RECEIVED! \n");
-        return 1;
-    }
+        Request request = parse_request(buffer);
 
-    // Implementation of simple ping-pong, to check server response
-    if (strncmp(buffer, "ping", 4) == 0) {
-        const char *response = "pong\n";
-        write(client_fd, response, strlen(response));
-        continue;
-    }
+        switch (request.type) {
+            case CMD_PING: {
+                const char *response = "pong\n";
+                write(client_fd, response, strlen(response));
+                break;
+            }
 
-    // Implementation of simple echo command, to check message handling
-    if (strncmp(buffer, "echo", 5) == 0) {
-        const char *message = buffer + 5;
-        printf("DEBUG");
-        write(client_fd, message, strlen(message));
-        continue;
-    }
+            case CMD_ECHO: {
+                write(client_fd, request.argument, strlen(request.argument));
+                write(client_fd, "\n", 1);
+                break;
+            }
 
-    // Implementation of a simple help command, to output all current commands
-    if (strncmp(buffer, "help", 4) == 0) {
-        const char *response =
-            "HELP: \n"
-            "Available commands are: ping, echo <message>, shutdown and quit \n";
-        write(client_fd, response, strlen(response));
-        continue;
-    }
+            case CMD_HELP: {
+                const char *response =
+                    "HELP:\n"
+                    "Available commands: ping, echo <message>, help, quit, shutdown\n";
+                write(client_fd, response, strlen(response));
+                break;
+            }
 
-    if (strncmp(buffer, "quit", 4) == 0) {
-        const char *response = "Quitting...";
-        write(client_fd, response, strlen(response));
-        const int *connection_bool = 0;
-        return 0;
-    }
+            case CMD_QUIT: {
+                const char *response = "Quitting...\n";
+                write(client_fd, response, strlen(response));
+                return 0;
+            }
+
+            case CMD_SHUTDOWN: {
+                const char *response = "Shutting down...\n";
+                write(client_fd, response, strlen(response));
+                return 1;
+            }
+
+            case CMD_UNKNOWN:
+            default: {
+                const char *response = "Unknown command. Type help.\n";
+                write(client_fd, response, strlen(response));
+                break;
+            }
+            case CMD_MESSAGE: {
+                const char *prefix = "Message received: ";
+                write(client_fd, prefix, strlen(prefix));
+                write(client_fd, request.argument, strlen(request.argument));
+                write(client_fd, "\n", 1);
+                break;
+            }
+
+            case REQ_GET: {
+                const char *response = "GET request received for path: ";
+                write(client_fd, response, strlen(response));
+                write(client_fd, request.path, strlen(request.path));
+                write(client_fd, "\n", 1);
+                break;
+            }
+
+            case REQ_POST: {
+                const char *response = "POST request received.\n";
+                write(client_fd, response, strlen(response));
+                break;
+            }
+
+            case REQ_PUT: {
+                const char *response = "PUT request received.\n";
+                write(client_fd, response, strlen(response));
+                break;
+            }
+        }
 
 
 
