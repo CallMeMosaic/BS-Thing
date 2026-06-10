@@ -3,7 +3,7 @@
 echo "Setting up RAG System..."
 
 # Create data directories
-mkdir -p data/llm data/documents
+mkdir -p data/llm data/documents data/chromadb
 
 # Set permissions
 chmod -R 755 data/
@@ -12,14 +12,15 @@ chmod -R 755 data/
 docker compose down --remove-orphans
 
 # Port freigeben falls nötig
-#sudo pkill -f rag-llm
+sudo pkill -f rag-llm
+sudo pkill -f rag-chromadb
 sudo pkill -f rag-server
 docker rm -f rag-server
 
 # Build and start services
 docker compose up --build -d
 
-#docker exec -it rag-llm ollama pull qwen3:0.6b
+docker exec -it rag-llm ollama pull qwen3:0.6b
 
 docker build -t rag-server RAG-Server/.
 docker run --name rag-server rag-server

@@ -1,22 +1,30 @@
-FROM ubuntu:latest
+#builder
+FROM ubuntu:22.04 AS builder
 
+WORKDIR /app
+
+# Install Build-Tools
 RUN apt-get update && \
-    apt-get install -y \
-    build-essential \
-    cmake \
-    gdb \
- && rm -rf /var/lib/apt/lists/*
+    apt-get install -y --no-install-recommends build-essential && \
+    rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
+# copy project folder
 COPY . .
 
-# Kopiere den gesamten src-Ordner (inkl. Unterverzeichnis) in /app
+# compile /app/src/server
+RUN mkdir -p /app/build && \
+    gcc ./src/server.c ./src/server_socket.c ./src/client_handler.c ./src/api.c ./src/request_parser.c -I./include -o ./src/server
+
+# runtime
+FROM ubuntu:22.04
+
 WORKDIR /app
-COPY . .
-RUN mkdir -p /app/build
 
-# Kompiliere mit dem korrekten Pfad
-RUN gcc ./src/server.c ./src/server_socket.c ./src/client_handler.c ./src/api.c ./src/request_parser.c ./src/response.c -I./include -o ./src/server
+# copy /app/src/server (Builder) to /app/src/server (Runtime)
+COPY --from=builder /app/src/server ./src/server
 
-# Führe die Anwendung aus
+# set rigths
+RUN chmod +x ./src/server
+
+# run
 CMD ["./src/server"]
