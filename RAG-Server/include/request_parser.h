@@ -26,11 +26,16 @@ typedef enum {
     
     CMD_MESSAGE,
     CMD_UNKNOWN,
+
+    REQ_SUB,
+    REQ_UNSUB,
+    REQ_PUB,
 } CommandType;
 
 typedef struct {
     CommandType type;
     char *path;
+    char *topic;
     char *body;
     char *argument;
 } Request;
