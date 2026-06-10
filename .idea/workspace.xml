@@ -19,6 +19,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
+      <config projectName="BS_Thingy" targetName="BS_Thingy.exe" />
       <config projectName="BS_Thingy" targetName="BS_Thingy" />
     </generated>
   </component>
@@ -29,11 +30,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2d676b1-0775-42fd-96ac-517bb5d521b5" name="Changes" comment="Merged Docker and Freyja.&#10;Also added the original server.c file back manually.&#10;Doesn't compile yet.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f2d676b1-0775-42fd-96ac-517bb5d521b5" name="Changes" comment="Yeahhh I edited client_handler.c and request_parser.c">
+      <change afterPath="$PROJECT_DIR$/RAG-Server/include/pubsub.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAG-Server/src/api.c" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/api.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG-Server/include/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/include/config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG-Server/include/request_parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/include/request_parser.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG-Server/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG-Server/src/client_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/client_handler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG-Server/src/request_parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/request_parser.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG-Server/src/server.c" beforeDir="false" afterPath="$PROJECT_DIR$/RAG-Server/src/server.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +52,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Freyja" />
+        <entry key="$PROJECT_DIR$" value="Freyja-MultiThreading-LeaPreMerge" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,7 +66,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/CallMeMosaic/BS-Thing.git&quot;,
-    &quot;accountId&quot;: &quot;b561d4c6-60f1-4690-9c40-10e64a856a32&quot;
+    &quot;accountId&quot;: &quot;b17b3085-4eee-4efa-836b-df8981f2e9cb&quot;
   }
 }</component>
   <component name="MacroExpansionManager">
@@ -91,6 +95,7 @@
   "keyToString": {
     "C/C++ File.main.c.executor": "Run",
     "C/C++ File.server.c.executor": "Run",
+    "CMake Application.BS_Thingy.exe.executor": "Run",
     "CMake Application.server.c.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
@@ -106,37 +111,39 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "Freyja",
+    "git-widget-placeholder": "Freyja-MultiThreading-LeaPreMerge-PubSub",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/lenab/CLionProjects/BS-Thing/DB",
+    "last_opened_file_path": "Y:/University Projects/BS-Thing/RAG-Server/include",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "org.rust.first.attach.projects": "true",
-    "settings.editor.selected.configurable": "CPPToolchains",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="Y:\University Projects\BS-Thing\RAG-Server\include" />
       <recent name="C:\Users\lenab\CLionProjects\BS-Thing\DB" />
       <recent name="C:\Users\lenab\CLionProjects\BS-Thing\RAG-Server" />
       <recent name="C:\Users\lenab\CLionProjects\BS-Thing" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="Y:\University Projects\BS-Thing\RAG-Server\src" />
       <recent name="C:\Users\Freyj\CLionProjects\BS-Thing\RAG-Server\src" />
       <recent name="C:\Users\lenab\CLionProjects\BS-Thing\RAG-Server\src" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.server.c">
-    <configuration name="BS_Thingy" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BS_Thingy" TARGET_NAME="BS_Thingy" CONFIG_NAME="Debug-Docker" RUN_TARGET_PROJECT_NAME="BS_Thingy" RUN_TARGET_NAME="BS_Thingy">
+  <component name="RunManager" selected="CMake Application.BS_Thingy.exe">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="BS_Thingy.exe" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BS_Thingy" TARGET_NAME="BS_Thingy.exe" CONFIG_NAME="Debug-Docker" RUN_TARGET_PROJECT_NAME="BS_Thingy" RUN_TARGET_NAME="BS_Thingy.exe">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -178,7 +185,7 @@
       <item itemvalue="C/C++ File.main.c" />
       <item itemvalue="C/C++ File.server.c" />
       <item itemvalue="CMake Application.server.c" />
-      <item itemvalue="CMake Application.BS_Thingy" />
+      <item itemvalue="CMake Application.BS_Thingy.exe" />
       <item itemvalue="Shell Script.setup.sh" />
     </list>
     <recent_temporary>
@@ -202,6 +209,9 @@
       <workItem from="1777809673658" duration="1667000" />
       <workItem from="1778237416070" duration="2859000" />
       <workItem from="1778685620873" duration="4719000" />
+      <workItem from="1779729539532" duration="5929000" />
+      <workItem from="1780440377464" duration="2186000" />
+      <workItem from="1781096741501" duration="4271000" />
     </task>
     <task id="LOCAL-00001" summary="initial Docker commit">
       <option name="closed" value="true" />
@@ -219,7 +229,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778242409371</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Multithreading and basic commands for server.c are implemented!">
+      <option name="closed" value="true" />
+      <created>1779732988806</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779732988806</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Multithreading works now. MAX Connections is defined as a constant in config.h with max of 10 connections. If max clients is reached, new connection will be refused and clients can't connect. &#10;&#10;Next to do:&#10;- Multithreading with a queue instead of instantly declining a client&#10;- proper switch case and enum for each command instead of multiple if statements.&#10;- Proper commenting.&#10;&#10;&#10;I wanna go sleep. Like Idk mate I am tried and I kinda wanna like yk not have broken up with V on friday, like that sucks yK? We friends now :D but Idk I wish it would've worked :/ She seemed to be fitting so well yk?&#10;&#10;Who tf would even read all this? Ay if you're reading this, thanks :D">
+      <option name="closed" value="true" />
+      <created>1779749009360</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1779749009360</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +260,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial Docker commit" />
     <MESSAGE value="Merged Docker and Freyja.&#10;Also added the original server.c file back manually.&#10;Doesn't compile yet." />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged Docker and Freyja.&#10;Also added the original server.c file back manually.&#10;Doesn't compile yet." />
+    <MESSAGE value="Multithreading and basic commands for server.c are implemented!" />
+    <MESSAGE value="Multithreading works now. MAX Connections is defined as a constant in config.h with max of 10 connections. If max clients is reached, new connection will be refused and clients can't connect. &#10;&#10;Next to do:&#10;- Multithreading with a queue instead of instantly declining a client&#10;- proper switch case and enum for each command instead of multiple if statements.&#10;- Proper commenting.&#10;&#10;&#10;I wanna go sleep. Like Idk mate I am tried and I kinda wanna like yk not have broken up with V on friday, like that sucks yK? We friends now :D but Idk I wish it would've worked :/ She seemed to be fitting so well yk?&#10;&#10;Who tf would even read all this? Ay if you're reading this, thanks :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multithreading works now. MAX Connections is defined as a constant in config.h with max of 10 connections. If max clients is reached, new connection will be refused and clients can't connect. &#10;&#10;Next to do:&#10;- Multithreading with a queue instead of instantly declining a client&#10;- proper switch case and enum for each command instead of multiple if statements.&#10;- Proper commenting.&#10;&#10;&#10;I wanna go sleep. Like Idk mate I am tried and I kinda wanna like yk not have broken up with V on friday, like that sucks yK? We friends now :D but Idk I wish it would've worked :/ She seemed to be fitting so well yk?&#10;&#10;Who tf would even read all this? Ay if you're reading this, thanks :D" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/RAG-Server/src/client_handler.c</url>
+          <line>18</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
