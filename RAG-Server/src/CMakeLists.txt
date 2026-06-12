@@ -14,6 +14,7 @@ add_executable(BS_Thingy.exe server.c
         request_parser.c
         response.c
         ../include/pubsub.h
+        pubsub.c
         pubsub.c)
 
 target_link_libraries(BS_Thingy.exe pthread)
